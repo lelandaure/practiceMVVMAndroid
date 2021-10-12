@@ -1,11 +1,11 @@
-package com.lel.practicemvvm.view
+package com.lel.practicemvvm.ui.view
 
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.lel.practicemvvm.databinding.ActivityMainBinding
-import com.lel.practicemvvm.viewmodel.QuoteViewModel
+import com.lel.practicemvvm.ui.viewmodel.QuoteViewModel
 
 class MainActivity : AppCompatActivity() {
 

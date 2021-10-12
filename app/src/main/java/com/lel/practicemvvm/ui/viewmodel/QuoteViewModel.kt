@@ -1,9 +1,9 @@
-package com.lel.practicemvvm.viewmodel
+package com.lel.practicemvvm.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.lel.practicemvvm.model.QuoteModel
-import com.lel.practicemvvm.model.QuoteProvider
+import com.lel.practicemvvm.data.model.QuoteModel
+import com.lel.practicemvvm.data.model.QuoteProvider
 
 class QuoteViewModel : ViewModel() {
 
