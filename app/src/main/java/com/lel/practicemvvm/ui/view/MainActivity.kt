@@ -3,6 +3,7 @@ package com.lel.practicemvvm.ui.view
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import com.lel.practicemvvm.databinding.ActivityMainBinding
 import com.lel.practicemvvm.ui.viewmodel.QuoteViewModel
@@ -23,6 +24,10 @@ class MainActivity : AppCompatActivity() {
         quoteViewModel.quoteModel.observe(this, Observer { currentQuote ->
             binding.tvQuote.text = currentQuote.quote
             binding.tvAuthor.text = currentQuote.author
+        })
+
+        quoteViewModel.isLoading.observe(this, Observer {
+            binding.progressBar.isVisible = it
         })
 
         binding.viewContainer.setOnClickListener { quoteViewModel.randomQuote() }
